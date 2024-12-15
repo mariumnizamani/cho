@@ -1,0 +1,761 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #f9f9f9, #ffffff);
+    color: #333;
+}
+
+/* Welcome Poster */
+#welcome-poster {
+    text-align: center;
+    padding: 40px 20px;
+    background: url('https://img.freepik.com/premium-photo/cartoon-school-with-sun-top-it_1256382-236.jpg') no-repeat center/cover;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#welcome-poster h1 {
+    font-size: 2.5rem;
+    animation: fadeInDown 1.5s ease-out;
+}
+
+#welcome-poster h4 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    animation: fadeInUp 2s ease-out;
+}
+
+/* Navigation Bar */
+#navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    color: #000000;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+#navbar ul li {
+    margin: 0 15px;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    padding: 0px 0px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+#navbar ul li a:hover {
+    background: #0056b3;
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+/* Image Slider */
+#slider {
+    padding: 20px;
+    text-align: center;
+    background: #ffffff;
+}
+
+.slider-container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-container .slide {
+    flex: 0 0 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-container img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* About School, Gallery, Events */
+section {
+    padding: 40px 20px;
+    text-align: center;
+    background: #f2e183;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery-container img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Exam Results */
+#exam-result {
+    background: #f8f9fa;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.result img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.result h3 {
+    flex: 1;
+    text-align: left;
+}
+
+.result p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background: #333;
+    color: white;
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .result {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .result img {
+        margin: 0 0 10px;
+    }
+}/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #000000;
+}
+
+/* Welcome Poster */
+#welcome-poster {
+    text-align: center;
+    padding: 20px;
+    background-color: #007acc;
+    color: white;
+}
+
+#welcome-poster img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.fade-in-delay {
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Navigation Bar */
+#navbar {
+    background-color: #333;
+    color: white;
+    overflow: hidden;
+}
+
+#navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+#navbar ul li {
+    padding: 10px 20px;
+}
+
+#navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.3s;
+}
+
+#navbar ul li a:hover {
+    background-color: #007acc;
+}
+
+/* Slider */
+#slider {
+    text-align: center;
+    padding: 20px;
+}
+
+.slider-container {
+    display: flex;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+}
+
+.slider-container .slide {
+    flex: 0 0 80%;
+    scroll-snap-align: start;
+    position: relative;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+.slider-container img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.slider-container p {
+    margin: 10px 0 0;
+}
+
+/* About School, Gallery, Events & About Us */
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Exam Results Section */
+#exam-result {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+#exam-result h2 {
+    color: #007acc;
+    margin-bottom: 20px;
+}
+
+.result {
+    margin: 20px 0;
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.result h3 {
+    color: #444;
+}
+
+.result div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.result img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #007acc;
+}
+
+.result p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    font-size: 0.8rem;
+    margin-top: 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    #navbar ul {
+        flex-direction: column;
+    }
+
+    .slider-container .slide {
+        flex: 0 0 90%;
+    }
+
+    .result {
+        padding: 10px;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+/* Lightbox Styling */
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+#lightbox.active {
+    display: flex;
+}
+
+#lightbox:not(.active) {
+    display: none;
+}
+
+body.light-mode {
+    background-color: #ffffff;
+    color: #333;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #ffffff;
+}
+
+.dark-mode #navbar {
+    background-color: #222;
+}
+
+.light-mode #navbar {
+    background-color: #f4f4f9;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Welcome Poster */
+#welcome-poster {
+    text-align: center;
+    padding: 20px;
+    background-color: #007acc;
+    color: rgb(0, 0, 0);
+}
+
+#welcome-poster img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.fade-in-delay {
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Navigation Bar */
+#navbar {
+    background-color: #333;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+}
+
+#navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+#navbar ul li {
+    padding: 10px 20px;
+}
+
+#navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0px 0px;
+    display: block;
+    transition: background 0.3s;
+}
+
+#navbar ul li a:hover {
+    background-color: #007acc;
+}
+
+/* Slider */
+#slider {
+    text-align: center;
+    padding: 20px;
+}
+
+.slider-container {
+    display: flex;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+}
+
+.slider-container .slide {
+    flex: 0 0 80%;
+    scroll-snap-align: start;
+    position: relative;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+.slider-container img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.slider-container p {
+    margin: 10px 0 0;
+}
+
+/* About School, Gallery, Events & About Us */
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Exam Results Section */
+#exam-result {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+#exam-result h2 {
+    color: #007acc;
+    margin-bottom: 20px;
+}
+
+.result {
+    margin: 20px 0;
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.result h3 {
+    color: #444;
+}
+
+.result div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.result img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #007acc;
+}
+
+.result p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    font-size: 0.8rem;
+    margin-top: 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    #navbar ul {
+        flex-direction: column;
+    }
+
+    .slider-container .slide {
+        flex: 0 0 90%;
+    }
+
+    .result {
+        padding: 10px;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+/* Lightbox Styling */
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+#lightbox.active {
+    display: flex;
+}
+
+#lightbox:not(.active) {
+    display: none;
+}
+
+body.light-mode {
+    background-color: #ffffff;
+    color: #333;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #ffffff;
+}
+
+.dark-mode #navbar {
+    background-color: #222;
+}
+
+.light-mode #navbar {
+    background-color: #f4f4f9;
+}
+
+
+@media (max-width: 600px) {
+    #dark-mode-toggle {
+        width: 60px; /* Shrink button for smaller screens */
+        font-size: 0.8rem; /* Adjust text size */
+    }
+
+    .slider-container .slide {
+        flex: 0 0 100%; /* Ensure slides fit the screen width */
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust image sizes */
+    }
+
+    .result {
+        flex-direction: column; /* Stack result items vertically */
+        align-items: center;
+    }
+
+    .result img {
+        margin: 10px 0;
+    }
+}
+
+/* Welcome Poster Styles */
+.poster {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    display: block; /* Show the poster initially */
+  }
+  
+  .poster-content {
+    text-align: center;
+    color: white;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .poster h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .poster p {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .school-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .close-btn {
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .close-btn:hover {
+    background-color: #ff3b00;
+  }
+  
+  
